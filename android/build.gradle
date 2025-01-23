@@ -18,18 +18,22 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     defaultConfig {
         minSdkVersion 16
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     lintOptions {
         disable 'InvalidPackage'
-    }
-    dependencies {
-        compileOnly rootProject.findProject(":flutter_plugin_android_lifecycle")
     }
 }
 
 dependencies {
+    compileOnly rootProject.findProject(":flutter_plugin_android_lifecycle")
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.21"
 }
