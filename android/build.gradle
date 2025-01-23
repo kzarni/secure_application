@@ -40,6 +40,6 @@ android {
 }
 
 dependencies {
-    compileOnly rootProject.findProject(":flutter_plugin_android_lifecycle")
+//    compileOnly rootProject.findProject(":flutter_plugin_android_lifecycle")
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.0.21"
 }
